@@ -31,7 +31,6 @@ router.get("/:id", ensureAuthenticated, function(req, res){
 });
 
 
-
 //add submit POST route
 router.post("/add_article", function(req, res){
   req.checkBody("stream", "streamer required").notEmpty();

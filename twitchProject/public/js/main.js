@@ -96,11 +96,6 @@ function buildStreamerCard(json, pos){
         pos +">Unsubscirbe</a>"
         //switched from $name to pos
 
-        // $main = "<div id='row' display:inline-block>" +
-        //         "<div display:inline-block>" + $htmllogo + "</div>" +
-        //         "<div text-align:left>" + $htmlname + $htmlgame + $htmlurl +
-        //         $htmlfollowers + "</div>" +
-        //         $delButton + "</div>"
 
         $main = "<div class='container'>" +
                   "<div class='row'>" +

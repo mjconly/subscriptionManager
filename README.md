@@ -21,3 +21,10 @@ removed from the users account.
 6. Install jqeury with bower <code> $ bower install jquery </code>
     * Note that 5, 6 will be installed into the bower_components folder 
       of the project
+      
+## Run
+1. Make sure that mongo is running as a service
+2. From the terminal navigate to <code> twitchProject/ </code>
+3. Run application with <code> $ node app.js </code>
+4. Application should be running
+5. Open browser and navigate to <code> localhost:3000/ </code>

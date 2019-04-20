@@ -13,5 +13,6 @@ let articleSchema = mongoose.Schema({
   },
 });
 
+
 //pass in name of model
 let Article = module.exports = mongoose.model("article", articleSchema);

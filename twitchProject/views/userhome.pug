@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div.userhometitlebox
+    h1.userdisplayname #{username}'s subscriptons
+    h1.hiddenUserId #{userId}
+  ul.list-group.listStreamers
+      - var idx = 0
+      each article, i in articles
+        - var ai = article.userid
+        - var ui = userobj._id
+        - var pull = (ai == ui)
+        if pull
+          li.list-group-item(class="astreamer" id="s" + idx++)
+            h1.streamname= article.stream
+        
+          

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    div.addTitle
+      h1 Add Streamer
+      hr
+      br
+      br
+    form(method="POST", action="/articles/add_article")
+      #form-group
+        input.form-control(name="userid", type="text", value=userId, id="hide")
+      #form-group
+        label Enter Stream Name:
+        input.form-control(name="stream", type="text")
+      br
+      input.btn.btn-success(type="submit", value="Subscribe")

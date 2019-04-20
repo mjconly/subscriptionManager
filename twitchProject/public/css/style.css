@@ -1,0 +1,113 @@
+#actionMessage{
+  text-align: center;
+}
+
+.alert-error{
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert-success_msg{
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.hometitlebox{
+  padding-top: 30px;
+  text-align: center;
+}
+
+.homescreentitle{
+  font-size: 40px;
+  font-family: sans-serif, monospace;
+}
+
+.hometextbox{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.hometext{
+  font-size: 25px;
+  font-family: sans-serif, monospace;
+}
+
+
+.userhometitlebox{
+  text-align: center;
+}
+
+.userdisplayname{
+  padding-top: 25px;
+  font-weight: bold;
+  font-family: sans-serif, monospace;
+}
+
+.hiddenUserId{
+  visibility: hidden;
+}
+
+
+
+.navbar{
+  background-color: #1D252D;
+}
+
+li.nav-item{
+  color:white;
+  font-size: 30px;
+}
+
+a.nav-link{
+  color:white;
+}
+
+a.nav-link:hover{
+  color:#805fb4;
+}
+
+a.navbar-brand{
+  color:#805fb4;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.addTitle{
+  padding-top: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-family: sans-serif, monospace;
+}
+
+.addSearchInfo{
+  font-family: sans-serif, monospace;
+}
+
+#hide{
+  visibility: hidden;
+}
+
+.astreamer{
+  transition: all .2s ease-in-out;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.astreamer:hover{
+  transform: scale(1.1);
+  border-color: #805fb4;
+}
+
+.streamname{
+  visibility: hidden;
+  visibility: collapse;
+  display: none;
+}
+
+.navbar-toggler{
+  background-color: #805fb4;
+}

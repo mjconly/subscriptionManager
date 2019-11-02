@@ -89,12 +89,14 @@ a.navbar-brand{
   visibility: hidden;
 }
 
+
 .astreamer{
   transition: all .2s ease-in-out;
   margin-top: 15px;
   margin-bottom: 15px;
-  text-align: center;
+  text-align: left;
 }
+
 
 .astreamer:hover{
   transform: scale(1.1);
@@ -109,4 +111,56 @@ a.navbar-brand{
 
 .navbar-toggler{
   background-color: #805fb4;
+}
+
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+
+  h3{
+    font-size: .75em;
+  }
+
+  .btn-danger{
+    font-size: .75em;
+  }
+
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+
+  h3{
+    font-size: 1em;
+  }
+
+  .btn-danger{
+    font-size: 1em;
+  }
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+
+  h3{
+    font-size: 2em;
+  }
+
+  .btn-danger{
+    font-size: 2em;
+  }
+
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+
+  h3{
+    font-size: 2em;
+  }
+
+  .btn-danger{
+    font-size: 2em;
+  }
 }

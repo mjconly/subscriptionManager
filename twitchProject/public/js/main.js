@@ -1,5 +1,6 @@
 var idx;
 var comp = [];
+var streamerID = [];
 var maxCount;
 
 //build a "card" for invalid streamer
@@ -39,13 +40,13 @@ function build404Card(){
                           $htmlname +
                         "</div>" +
                         "<div class='row'>" +
-                          $htmlgame +
+                          $htmlgame + 
                         "</div>" +
                         "<div class='row'>" +
                           $htmlurl +
                         "</div>" +
                         "<div class='row'>" +
-                          $htmlfollowers +
+                          $htmlfollowers + 
                         "</div>" +
                         "<div class='row'>" +
                           $delButton +
@@ -154,15 +155,47 @@ function updateBlanks(count){
 
 
 $(document).ready(function(){
-
   idx = 0;
   maxCount = $(".listStreamers li").length;
-
-
   $(".listStreamers li").each(function(){
       $tag = $(this).find(".streamname").text();
+	  console.log($tag);
+	  $.ajax({
+    		type: 'GET',
+    		url: 'https://api.twitch.tv/kraken/users?login=' + $tag,
+    		headers: {
+       			'Client-ID': '9xrx1gabc0dlit7k0m5xvnq7uz8o3c',
+			'Accept': 'application/vnd.twitchtv.v5+json'
+    		},
+    		success: function(data){
+			$id = data["users"][0]._id;
+			$.ajax({
+				type: 'GET',
+				url: 'https://api.twitch.tv/kraken/channels/' + $id,
+				headers: {
+					'Client-ID': '9xrx1gabc0dlit7k0m5xvnq7uz8o3c',
+					'Accept': 'application/vnd.twitchtv.v5+json'
+				},
+				success: function(data){
+					$displayName = data.display_name;
+					comp.push($displayName);
+					buildStreamerCard(data, $displayName);
+					idx += 1;
+					updateBlanks(idx);
+				}
+				
+			}).fail(function(d, status, err){
+				idx += 1;
+				updateBlanks(idx);
+			})
+		    }
+  		});
+
+
+/*    ** This no longer works due to change in twitch's API
+
       //promise to build cards after twitch get request
-      $.getJSON("https://api.twitch.tv/kraken/channels/" + $tag +
+      $.getJSON("https://api.twitch.tv/kraken/channel/" + $tag +
       "?client_id=9xrx1gabc0dlit7k0m5xvnq7uz8o3c&callback=?")
 
       .done(function(data){
@@ -180,5 +213,6 @@ $(document).ready(function(){
         idx += 1;
         updateBlanks(idx);
       })
+*/
     })
 });

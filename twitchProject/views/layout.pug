@@ -4,6 +4,7 @@ html
     title project test
     link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
     link(rel="stylesheet" href="/css/style.css")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
   body
     nav.navbar.navbar-expand-md
       //- a.navbar-brand(href='/') Twitch Subscription App
@@ -27,7 +28,7 @@ html
               a.nav-link(href="/users/register") Register
             li.nav-item
               a.nav-link(href="/users/login") Login
-    .container
+    div(class='col-md-4 m-auto')
       != messages("message", locals)
       if errors
         each error, i in errors
